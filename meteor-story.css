@@ -1,0 +1,39 @@
+/* CSS declarations go here */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+.pongfield {
+	position: relative;
+	background-color: #007dad;
+	height: 100vh;
+	width: 100%;
+	padding: 20px;
+}
+
+.pongfield .bal {
+	border-radius: 100%;
+	background-color: brown;
+	width: 75px;
+	height: 75px;
+}
+
+.pongfield .player {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	background-color: white;
+	width: 20px;
+	height: 20%;
+}
+
+.pongfield .player:last-child {
+	right: 20px;
+	left: auto;
+}

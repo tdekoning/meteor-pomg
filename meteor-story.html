@@ -1,0 +1,22 @@
+<head>
+  <title>Ultimate POMG!1</title>
+</head>
+
+<body>
+  <h1></h1>
+
+  {{> pongfield}}
+</body>
+
+<template name="pongfield">
+  <div class="pongfield">
+    <div class="bal"></div>
+    {{#each players}}
+      {{> player}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="player">
+  <div class="player" style="top: {{player.position.y}}"></div>
+</template>
