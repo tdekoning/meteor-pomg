@@ -3,14 +3,14 @@
 </head>
 
 <body>
-  <h1></h1>
-
+  {{> loginButtons}}
   {{> pongfield}}
 </body>
 
 <template name="pongfield">
   <div class="pongfield">
-    <div class="bal"></div>
+  <div class="field-background"></div>
+    {{> ball}}
     {{#each players}}
       {{> player}}
     {{/each}}
@@ -18,5 +18,9 @@
 </template>
 
 <template name="player">
-  <div class="player" style="top: {{player.position.y}}"></div>
+  <div class="player" style="top: {{position.y}}%"></div>
+</template>
+
+<template name="ball">
+  <div class="ball" style="left: {{ball.position.x}}%; top: {{ball.position.y}}%;"></div>
 </template>
